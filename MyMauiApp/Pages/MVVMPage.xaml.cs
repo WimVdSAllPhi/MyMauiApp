@@ -10,7 +10,7 @@ public partial class MVVMPage : ContentPage
 
         // instantiate and initialize the ViewModel
 
-        ViewModel = new BlogPostOldViewModel();
+        ViewModel = new BlogPostNewViewModel();
 
         var blogPost = new BlogPost()
         {
@@ -33,7 +33,7 @@ public partial class MVVMPage : ContentPage
 
     #region Public Properties
 
-    public BlogPostOldViewModel ViewModel { get; private set; }
+    public BlogPostNewViewModel ViewModel { get; private set; }
 
     #endregion Public Properties
 }
