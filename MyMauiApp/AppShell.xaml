@@ -31,4 +31,34 @@
         Title="Blog Posts"
         ContentTemplate="{DataTemplate localPages:BlogPage}"
         Route="BlogPage" />
+
+    <ShellContent
+        Title="Accelerometer"
+        ContentTemplate="{DataTemplate localPages:AccelerometerPage}"
+        Route="AccelerometerPage" />
+
+    <ShellContent
+        Title="Compass"
+        ContentTemplate="{DataTemplate localPages:CompassPage}"
+        Route="CompassPage" />
+
+    <ShellContent
+        Title="Shake"
+        ContentTemplate="{DataTemplate localPages:ShakePage}"
+        Route="ShakePage" />
+
+    <ShellContent
+        Title="Gyroscope"
+        ContentTemplate="{DataTemplate localPages:GyroPage}"
+        Route="GyroPage" />
+
+    <ShellContent
+        Title="Orientation"
+        ContentTemplate="{DataTemplate localPages:OrientationPage}"
+        Route="OrientationPage" />
+
+    <ShellContent
+        Title="GPS"
+        ContentTemplate="{DataTemplate localPages:GeoLocationPage}"
+        Route="GeoLocationPage" />
 </Shell>
