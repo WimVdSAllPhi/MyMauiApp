@@ -91,4 +91,9 @@
         Title="MVVM"
         ContentTemplate="{DataTemplate localPages:MVVMPage}"
         Route="MVVMPage" />
+
+    <ShellContent
+        Title="Odds and Ends"
+        ContentTemplate="{DataTemplate localPages:OddsAndEndsPage}"
+        Route="OddsAndEndsPage" />
 </Shell>
