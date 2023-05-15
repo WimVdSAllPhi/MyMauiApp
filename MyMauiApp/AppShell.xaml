@@ -81,4 +81,9 @@
         Title="Swipe Gestures"
         ContentTemplate="{DataTemplate localPages:SwipePage}"
         Route="SwipePage" />
+
+    <ShellContent
+        Title="Animation"
+        ContentTemplate="{DataTemplate localPages:AnimationPage}"
+        Route="AnimationPage" />
 </Shell>

@@ -62,6 +62,9 @@
 	  <MauiXaml Update="Pages\AccelerometerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Pages\AnimationPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pages\BlogPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
