@@ -24,7 +24,7 @@ public class SwipeContainer : ContentView
 
     private SwipeGestureRecognizer GetSwipeGestureRecognizer(SwipeDirection direction)
     {
-        SwipeGestureRecognizer swipe = new SwipeGestureRecognizer { Direction = direction };
+        var swipe = new SwipeGestureRecognizer { Direction = direction };
         swipe.Swiped += (sender, e) => Swipe?.Invoke(this, e);
         return swipe;
     }

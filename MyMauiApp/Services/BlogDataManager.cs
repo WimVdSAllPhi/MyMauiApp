@@ -30,10 +30,11 @@ public static class BlogDataManager
 
         foreach (var item in feed.Items)
         {
-            var post = new BlogPost();
-
-            // Publish Date
-            post.PublishDate = item.PublishDate.DateTime;
+            var post = new BlogPost
+            {
+                // Publish Date
+                PublishDate = item.PublishDate.DateTime
+            };
 
             // Author. Use ElementExtensions to read the dc:creator tag
             var creators =

@@ -4,7 +4,7 @@ public partial class MainPage : ContentPage
 {
     #region Private Fields
 
-    private int count = 0;
+    private int _count = 0;
 
     #endregion Private Fields
 
@@ -21,12 +21,12 @@ public partial class MainPage : ContentPage
 
     private async void OnCounterClicked(object sender, EventArgs e)
     {
-        count++;
+        _count++;
 
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
+        if (_count == 1)
+            CounterBtn.Text = $"Clicked {_count} time";
         else
-            CounterBtn.Text = $"Clicked {count} times";
+            CounterBtn.Text = $"Clicked {_count} times";
 
         SemanticScreenReader.Announce(CounterBtn.Text);
 

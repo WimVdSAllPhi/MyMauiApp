@@ -49,7 +49,7 @@ public partial class OrientationPage : ContentPage
         var q = orientationSensorData.Orientation;
 
         var sinp = +2.0 * (q.W * q.Y - q.Z * q.X);
-        var pitch = 0.0;
+        double pitch;
         if (Math.Abs(sinp) >= 1)
             pitch = Math.CopySign(Math.PI / 2, sinp); // use 90 degrees if out of range
         else

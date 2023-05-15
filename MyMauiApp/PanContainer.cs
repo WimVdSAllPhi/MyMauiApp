@@ -4,7 +4,7 @@ public class PanContainer : ContentView
 {
     #region Private Fields
 
-    private double x, y;
+    private double _x, _y;
 
     #endregion Private Fields
 
@@ -13,7 +13,7 @@ public class PanContainer : ContentView
     public PanContainer()
     {
         // Set PanGestureRecognizer.TouchPoints to control the number of touch points needed to pan
-        PanGestureRecognizer panGesture = new PanGestureRecognizer();
+        var panGesture = new PanGestureRecognizer();
         panGesture.PanUpdated += OnPanUpdated;
         GestureRecognizers.Add(panGesture);
     }
@@ -28,14 +28,14 @@ public class PanContainer : ContentView
         {
             case GestureStatus.Running:
                 // Translate and ensure we don't pan beyond the wrapped user interface element bounds.
-                Content.TranslationX = Math.Max(Math.Min(0, x + e.TotalX), -Math.Abs(Content.Width - DeviceDisplay.MainDisplayInfo.Width));
-                Content.TranslationY = Math.Max(Math.Min(0, y + e.TotalY), -Math.Abs(Content.Height - DeviceDisplay.MainDisplayInfo.Height));
+                Content.TranslationX = Math.Max(Math.Min(0, _x + e.TotalX), -Math.Abs(Content.Width - DeviceDisplay.MainDisplayInfo.Width));
+                Content.TranslationY = Math.Max(Math.Min(0, _y + e.TotalY), -Math.Abs(Content.Height - DeviceDisplay.MainDisplayInfo.Height));
                 break;
 
             case GestureStatus.Completed:
                 // Store the translation applied during the pan
-                x = Content.TranslationX;
-                y = Content.TranslationY;
+                _x = Content.TranslationX;
+                _y = Content.TranslationY;
                 break;
         }
     }
