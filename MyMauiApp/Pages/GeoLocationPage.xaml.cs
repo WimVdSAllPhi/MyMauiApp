@@ -7,7 +7,7 @@ public partial class GeoLocationPage : ContentPage
     public GeoLocationPage()
     {
         InitializeComponent();
-        GPSTimer = new Timer(GetCurrentLocation, null, 100, 500);
+        _gPSTimer = new Timer(GetCurrentLocation, null, 100, 500);
     }
 
     #endregion Public Constructors
@@ -16,7 +16,9 @@ public partial class GeoLocationPage : ContentPage
 
     private CancellationTokenSource _cancelTokenSource;
     private bool _isCheckingLocation;
-    private Timer GPSTimer;
+#pragma warning disable S4487 // Unread "private" fields should be removed
+    private Timer _gPSTimer;
+#pragma warning restore S4487 // Unread "private" fields should be removed
 
     #endregion Private Fields
 
@@ -43,7 +45,7 @@ public partial class GeoLocationPage : ContentPage
             }
             // Catch one of the following exceptions: FeatureNotSupportedException
             // FeatureNotEnabledException PermissionException
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Unable to get location
             }
@@ -56,7 +58,7 @@ public partial class GeoLocationPage : ContentPage
 
     public void CancelRequest()
     {
-        if (_isCheckingLocation && _cancelTokenSource != null && _cancelTokenSource.IsCancellationRequested == false)
+        if (_isCheckingLocation && _cancelTokenSource != null && !_cancelTokenSource.IsCancellationRequested)
             _cancelTokenSource.Cancel();
     }
 

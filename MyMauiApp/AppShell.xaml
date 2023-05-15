@@ -66,4 +66,19 @@
         Title="Video"
         ContentTemplate="{DataTemplate localPages:VideoPage}"
         Route="VideoPage" />
+
+    <ShellContent
+        Title="Pan Gestures"
+        ContentTemplate="{DataTemplate localPages:PanPage}"
+        Route="PanPage" />
+
+    <ShellContent
+        Title="Pinch Gestures"
+        ContentTemplate="{DataTemplate localPages:PinchPage}"
+        Route="PinchPage" />
+
+    <ShellContent
+        Title="Swipe Gestures"
+        ContentTemplate="{DataTemplate localPages:SwipePage}"
+        Route="SwipePage" />
 </Shell>
