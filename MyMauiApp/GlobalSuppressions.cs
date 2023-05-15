@@ -8,3 +8,4 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Critical Code Smell", "S2223:Non-constant static fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:MyMauiApp.Services.BlogDataManager.BlogPosts")]
 [assembly: SuppressMessage("Usage", "CA2211:Non-constant fields should not be visible", Justification = "<Pending>", Scope = "member", Target = "~F:MyMauiApp.Services.BlogDataManager.BlogPosts")]
 [assembly: SuppressMessage("Minor Code Smell", "S1104:Fields should not have public accessibility", Justification = "<Pending>", Scope = "member", Target = "~F:MyMauiApp.Services.BlogDataManager.BlogPosts")]
+[assembly: SuppressMessage("Major Code Smell", "S125:Sections of code should not be commented out", Justification = "<Pending>", Scope = "member", Target = "~M:MyMauiApp.Pages.AnimationPage.OnEasingBounceOutAnimationClicked(System.Object,System.EventArgs)")]

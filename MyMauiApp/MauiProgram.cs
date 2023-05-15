@@ -3,6 +3,7 @@ global using System.Xml;
 global using CommunityToolkit.Maui;
 global using MyMauiApp.Models;
 global using MyMauiApp.Services;
+global using MyMauiApp.ViewModels;
 using Microsoft.Extensions.Logging;
 
 namespace MyMauiApp;

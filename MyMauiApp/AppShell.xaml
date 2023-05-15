@@ -86,4 +86,9 @@
         Title="Animation"
         ContentTemplate="{DataTemplate localPages:AnimationPage}"
         Route="AnimationPage" />
+
+    <ShellContent
+        Title="MVVM"
+        ContentTemplate="{DataTemplate localPages:MVVMPage}"
+        Route="MVVMPage" />
 </Shell>
