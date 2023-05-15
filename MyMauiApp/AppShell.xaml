@@ -4,11 +4,31 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MyMauiApp"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:localPages="clr-namespace:MyMauiApp.Pages"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <ShellContent
+        Title="Details"
+        ContentTemplate="{DataTemplate localPages:DetailPage}"
+        Route="DetailPage" />
+
+    <ShellContent
+        Title="Simple Binding"
+        ContentTemplate="{DataTemplate localPages:SimpleBinding}"
+        Route="SimpleBinding" />
+
+    <ShellContent
+        Title="Complex Binding"
+        ContentTemplate="{DataTemplate localPages:ComplexBinding}"
+        Route="ComplexBinding" />
+
+    <ShellContent
+        Title="Blog Posts"
+        ContentTemplate="{DataTemplate localPages:BlogPage}"
+        Route="BlogPage" />
 </Shell>

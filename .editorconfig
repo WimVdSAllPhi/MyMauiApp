@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# S2386: Mutable fields should not be "public static"
+dotnet_diagnostic.S2386.severity = none

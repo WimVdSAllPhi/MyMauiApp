@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿global using System.ServiceModel.Syndication;
+global using System.Xml;
+global using MyMauiApp.Models;
+global using MyMauiApp.Services;
+using Microsoft.Extensions.Logging;
 
 namespace MyMauiApp;
 
