@@ -19,7 +19,7 @@ public partial class MainPage : ContentPage
 
     #region Private Methods
 
-    private void OnCounterClicked(object sender, EventArgs e)
+    private async void OnCounterClicked(object sender, EventArgs e)
     {
         count++;
 
@@ -29,6 +29,16 @@ public partial class MainPage : ContentPage
             CounterBtn.Text = $"Clicked {count} times";
 
         SemanticScreenReader.Announce(CounterBtn.Text);
+
+        // Copy the button text to the clipboard
+        await Clipboard.Default.SetTextAsync(CounterBtn.Text);
+
+        // read and examine the text in the clipboard:
+        var text = await Clipboard.Default.GetTextAsync();
+        if (text == "Clicked 3 times")
+        {
+            CounterBtn.TextColor = Colors.Red;
+        }
     }
 
     #endregion Private Methods

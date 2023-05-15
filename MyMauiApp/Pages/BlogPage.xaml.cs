@@ -17,5 +17,8 @@ public partial class BlogPage : ContentPage
 
     public List<BlogPost> BlogPosts => BlogDataManager.BlogPosts;
 
+    public int Column2Width => Convert.ToInt32(AppState.Width) - 180;
+    public int ContentWidth => Convert.ToInt32(AppState.Width) - 100;
+
     #endregion Public Properties
 }

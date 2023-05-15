@@ -12,7 +12,14 @@
         <toolkit:MediaElement
             WidthRequest="{Binding VideoWidth}"
             HeightRequest="{Binding VideoHeight}"
-            Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            Source="embed://dnsintro.mp4"
             ShouldShowPlaybackControls="True" />
+
+        <!--<toolkit:MediaElement
+            WidthRequest="{Binding VideoWidth}"
+            HeightRequest="{Binding VideoHeight}"
+            Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            ShouldShowPlaybackControls="True"
+            />-->
     </VerticalStackLayout>
 </ContentPage>

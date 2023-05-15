@@ -9,11 +9,17 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Image Source="dotnet_bot.png"
+                   SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                   WidthRequest="250"
+                   HeightRequest="310">
+                <Image.Shadow>
+                    <Shadow Brush="Black"
+                            Offset="20,20"
+                            Radius="40"
+                            Opacity="0.8" />
+                </Image.Shadow>
+            </Image>
 
             <Label
                 Text="Hello, World!"
@@ -34,8 +40,6 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
