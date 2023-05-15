@@ -48,11 +48,6 @@ public partial class OrientationPage : ContentPage
     {
         var q = orientationSensorData.Orientation;
 
-        // Convert quaternion to Euler angles
-        var sinr_cosp = +2.0 * (q.W * q.X + q.Y * q.Z);
-        var cosr_cosp = +1.0 - 2.0 * (q.X * q.X + q.Y * q.Y);
-        var roll = Math.Atan2(sinr_cosp, cosr_cosp);
-
         var sinp = +2.0 * (q.W * q.Y - q.Z * q.X);
         var pitch = 0.0;
         if (Math.Abs(sinp) >= 1)
@@ -60,19 +55,15 @@ public partial class OrientationPage : ContentPage
         else
             pitch = Math.Asin(sinp);
 
-        var siny_cosp = +2.0 * (q.W * q.Z + q.X * q.Y);
-        var cosy_cosp = +1.0 - 2.0 * (q.Y * q.Y + q.Z * q.Z);
-        var yaw = Math.Atan2(siny_cosp, cosy_cosp);
-
         // Convert pitch to degrees for easier understanding
         pitch = pitch * 180.0 / Math.PI;
 
-        // The device is considered in landscape mode if it's tilted horizontally, meaning the pitch
+        // The device is considered in portrait mode if it's tilted horizontally, meaning the pitch
         // is closer to 0 or 180.
         if ((pitch <= 45 && pitch >= -45) || pitch >= 135 || pitch <= -135)
-            return true;  // Landscape
+            return true;  // Portrait
         else
-            return false; // Portrait
+            return false; // Landscape
     }
 
     #endregion Private Methods

@@ -23,8 +23,8 @@ public partial class App : Application
         window.Created += Window_Created;
         window.SizeChanged += Window_SizeChanged;
 #else
-        //AppState.Width = DeviceDisplay.Current.MainDisplayInfo.Width;
-        //AppState.Height = DeviceDisplay.Current.MainDisplayInfo.Height;
+        AppState.Width = DeviceDisplay.Current.MainDisplayInfo.Width;
+        AppState.Height = DeviceDisplay.Current.MainDisplayInfo.Height;
 #endif
         return window;
     }
@@ -37,8 +37,8 @@ public partial class App : Application
     {
 #if WINDOWS || MACCATALYST
         var window = (Window)sender;
-        //AppState.Width = window.Width;
-        //AppState.Height = window.Height;
+        AppState.Width = window.Width;
+        AppState.Height = window.Height;
 #endif
     }
 
@@ -62,8 +62,8 @@ public partial class App : Application
             displayInfo.Density - window.Width) / 2;
         window.Y = (displayInfo.Height /
             displayInfo.Density - window.Height) / 2;
-        //AppState.Width = window.Width;
-        //AppState.Height = window.Height;
+        AppState.Width = window.Width;
+        AppState.Height = window.Height;
 #endif
     }
 

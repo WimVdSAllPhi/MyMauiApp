@@ -61,4 +61,9 @@
         Title="GPS"
         ContentTemplate="{DataTemplate localPages:GeoLocationPage}"
         Route="GeoLocationPage" />
+
+    <ShellContent
+        Title="Video"
+        ContentTemplate="{DataTemplate localPages:VideoPage}"
+        Route="VideoPage" />
 </Shell>
